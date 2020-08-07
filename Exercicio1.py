@@ -2,16 +2,16 @@
 import math
 
 # def exercicio1():
-#   main();
+#   main()
 
 # def main():
-#   valorRaio = float(input("Informe o valor do raio da esfera ? \n").lower());
-#   print(valorRaio);
-#   print("Para calcular a área da esfera digite a letra 'a'");
-#   print("Para calcular o volume da esfera digite a letra 'b'");
-#   print("Para voltar ao menu principal digite a letra 'c'");
+#   valorRaio = float(input("Informe o valor do raio da esfera ? \n").lower())
+#   print(valorRaio)
+#   print("Para calcular a área da esfera digite a letra 'a'")
+#   print("Para calcular o volume da esfera digite a letra 'b'")
+#   print("Para voltar ao menu principal digite a letra 'c'")
 
-#   letraOpcao = str(input("Por favor informe a opção desejada ! \n"));
+#   letraOpcao = str(input("Por favor informe a opção desejada ! \n"))
 
 #   if letraOpcao == "a":
 #     calculaAreaEsfera(valorRaio)
@@ -21,7 +21,7 @@ import math
 #     main()
 
 # def calculaAreaEsfera(valorRaio):
-#   areaEsfera = 4 * math.pi * math.pow(valorRaio, 2);
+#   areaEsfera = 4 * math.pi * math.pow(valorRaio, 2)
 #   print("O valor da Area é de %.2f" %areaEsfera)
 
 # def calculaVolumeEsfera(valorRaio): 
@@ -31,34 +31,51 @@ import math
 # exercicio1()
 
 
-def exercicio2(): 
-  salarioGoku = float(input("Informe o salário de Goku ? \n"));
-  primeiraConta = float(input("Informe o valor da primeira conta ? \n"));
-  segundaConta = float(input("Informe o valor da segunda conta ? \n"));
-  quantidadeDias = int(input("Informe a quantidade de dias em atraso \n"));
+# def exercicio2(): 
+#   salarioGoku = float(input("Informe o salário de Goku ? \n"))
+#   primeiraConta = float(input("Informe o valor da primeira conta ? \n"))
+#   segundaConta = float(input("Informe o valor da segunda conta ? \n"))
+#   quantidadeDias = int(input("Informe a quantidade de dias em atraso \n"))
 
-  def calculaValoresDasMultas():
-    valorPorcentagem = (quantidadeDias * 2) / 100;
+#   def calculaValoresDasMultas():
+#     valorPorcentagem = (quantidadeDias * 2) / 100
 
-    valorMultaPrimeiraConta = primeiraConta + (primeiraConta * valorPorcentagem)
+#     valorMultaPrimeiraConta = primeiraConta + (primeiraConta * valorPorcentagem)
 
-    valorMultaSegundaConta = segundaConta + (segundaConta * valorPorcentagem)
+#     valorMultaSegundaConta = segundaConta + (segundaConta * valorPorcentagem)
 
-    calculaValorSalario(valorMultaPrimeiraConta, valorMultaSegundaConta)
+#     calculaValorSalario(valorMultaPrimeiraConta, valorMultaSegundaConta)
 
 
-  def calculaValorSalario(valorMultaPrimeiraConta, valorMultaSegundaConta):
-    valorTotalContas = valorMultaPrimeiraConta + valorMultaSegundaConta
-    salario = salarioGoku - valorTotalContas;
+#   def calculaValorSalario(valorMultaPrimeiraConta, valorMultaSegundaConta):
+#     valorTotalContas = valorMultaPrimeiraConta + valorMultaSegundaConta
+#     salario = salarioGoku - valorTotalContas
 
-    if (salario < 0):
-      return print("Goku ficará devendo %.2f" %salario)
-    else:
-      print("O restante do salário de Goku é de %.2f" %salario)
+#     if (salario < 0):
+#       return print("Goku ficará devendo %.2f" %salario)
+#     else:
+#       print("O restante do salário de Goku é de %.2f" %salario)
 
-  calculaValoresDasMultas()
+#   calculaValoresDasMultas()
   
-exercicio2();
+# exercicio2()
+
+def exercicio3():
+  altura = float(input("Informe a altura ? \n"))
+  sexo = str(input("Informe o sexo da pessoa ? \n M -> Masculino, F -> Feminino \n").upper());
+
+  if (sexo == "M" or sexo == "F"):
+    if sexo == "M":
+      pesoIdeal = (72.2 * altura) - 58;
+    else: 
+      pesoIdeal = (62.1 * altura) - 44.7;
+  else:
+    print("Por favor informe os caracteres corretamente.")
+    return
+
+  print("O peso ideal é de %.2f" %pesoIdeal)
+
+exercicio3()
 
 
   
